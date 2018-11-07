@@ -54,7 +54,6 @@ echo "-----> Downloading curl $CURL_VERSION"
 DOWNLOAD_URL="https://curl.haxx.se/download/curl-$CURL_VERSION.tar.gz"
 curl -sL "$DOWNLOAD_URL" > $CACHE_DIR/curl-$CURL_VERSION.tar.gz 2>&1 | indent
 tar -xf $CACHE_DIR/curl-$CURL_VERSION.tar.gz
-pushd $CACHE_DIR/curl-$CURL_VERSION
 echo "-----> Configuring curl with ssl and libssh2"
 echo "-----> Current path: $(pwd)"
 echo "-----> Libssh2 contents: $(ls -la $BUILD_DIR/vendor/libssh2)"
