@@ -27,7 +27,7 @@ BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 # Download libssh2
 
-LIBSSH2_URL=https://github.com/libssh2/libssh2/archive/libssh2-$LIBSSH2_VERSION.tar.gz
+LIBSSH2_URL=https://www.libssh2.org/download/libssh2-$LIBSSH2_VERSION.tar.gz
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/libssh2-$LIBSSH2_VERSION.tar.gz ]; then
