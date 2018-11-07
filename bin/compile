@@ -47,14 +47,14 @@ ls -la .
 ./configure --prefix=$BUILD_DIR/vendor 2>&1 | indent
 make 2>&1 | indent
 make install  2>&1 | indent
+cd ..
 
 ### Download, make and install
 
 echo "-----> Downloading curl $CURL_VERSION"
 DOWNLOAD_URL="https://curl.haxx.se/download/curl-$CURL_VERSION.tar.gz"
-curl -sL "$DOWNLOAD_URL" > $CACHE_DIR/curl-$CURL_VERSION.tar.gz 2>&1 | indent
-tar -xf $CACHE_DIR/curl-$CURL_VERSION.tar.gz
-cd ..
+curl -sL "$DOWNLOAD_URL" > curl-$CURL_VERSION.tar.gz 2>&1 | indent
+tar -xf curl-$CURL_VERSION.tar.gz
 echo "-----> Current path: $(pwd)"
 echo "-----> Current contents: $(ls -la .)"
 pushd curl-$CURL_VERSION
