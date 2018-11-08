@@ -45,7 +45,7 @@ tar -xf libssh2-$LIBSSH2_VERSION.tar.gz
 cd libssh2-$LIBSSH2_VERSION
 ls -la .
 export PATH=$BUILD_DIR/vendor:$PATH
-./configure --prefix=$BUILD_DIR/vendor 2>&1 | indent
+./configure --prefix=$BUILD_DIR/vendor/lib 2>&1 | indent
 make 2>&1 | indent
 make install  2>&1 | indent
 cd ..
