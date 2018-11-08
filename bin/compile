@@ -58,6 +58,7 @@ curl -sL "$DOWNLOAD_URL" > curl-$CURL_VERSION.tar.gz 2>&1 | indent
 tar -xf curl-$CURL_VERSION.tar.gz
 cd curl-$CURL_VERSION
 echo "-----> Configuring curl with ssl and libssh2"
+echo "-----> Curl contents: $(ls -la .)"
 echo "-----> Current path: $(pwd)"
 echo "-----> Vendor contents: $(ls -la $BUILD_DIR/vendor)"
 echo "-----> Libssh2 contents: $(ls -la $BUILD_DIR/vendor/libssh2)"
